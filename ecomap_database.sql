@@ -1520,11 +1520,6 @@ where not exists (
 )
 on conflict (point_id, material_id) do nothing;
 
-select rpm.*
-from ReceptionPointMaterials rpm
-join ReceptionPoints rp on rpm.point_id = rp.point_id
-where rp.name = 'Нижметалл';
-
 --запрос
 /*select
     rp.name as point_name,
